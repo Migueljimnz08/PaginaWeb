@@ -1,0 +1,298 @@
+
+:root {
+  --azul: cornflowerblue;
+  --black: #333;
+  --green: rgb(5, 239, 5);
+  --grey: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roboto-body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+header img {
+  width: 70%;
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header nav {
+  width: 100%;
+  background-color: var(--black);
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--green);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+#About, #Worlds, h3 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#About {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#About p, #About img {
+  width: 100%;
+}
+
+#About img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+thead {
+  display: none; /* Hide table headers on small screens */
+}
+th {
+    padding: 12px;
+}
+
+tbody, tr, td {
+  display: block;
+  width: 100%;
+}
+
+tr {
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+td {
+  padding: 0.5rem;
+  text-align: left;
+  position: relative;
+}
+
+td::before {
+  content: attr(data-label);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  resize: vertical;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type="email"],select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  resize: vertical;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+footer {
+  background-color: var(--black);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#Actors h2 {
+  text-align: start;
+  padding-left: 5%;
+}
+/*
+#Actors div {
+display: block;
+unicode-bidi: isolate;
+}
+
+#Actors {
+    cursor: pointer;
+    width: 1005;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: .5s;
+  background-color: var(--green);
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+}
+  */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #About {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #About p {
+    width: 50%;
+  }
+
+  #About img {
+    width: 45%;
+  }
+
+  header img {
+    width: 25%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  table {
+    display: table;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody, tr, td {
+    display: table-row-group;
+  }
+
+  tr {
+    display: table-row;
+    border: none;
+    background-color: transparent;
+  }
+
+  td {
+    display: table-cell;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+  }
+
+  td::before {
+    display: none;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  header nav {
+    padding: 0 11.3%;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 2rem;
+  }
+}

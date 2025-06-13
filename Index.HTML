@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shrekverso</title>
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="icon" type="image/x-icon" href="/Assets/Icono.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Welcome to my swamp</h1>
+        <img src="https://www.dreamworks.com/storage/movies/shrek/shrek-logo.png" alt="Shrek. On Blu-Ray, DVD &amp; Digital">
+        <nav>
+            <ul>
+                <li><a href="#">Worlds</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="/Pages/actors.HTML">Actors</a></li>
+                <li><a href="#contact">Stay in touch</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main> 
+        <h1 class='content' id="title"></h1>
+        <section id="Worlds" class="content">
+            <h2>Worlds</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>City</th>
+                        <th>About</th>
+                        <th>Film</th>
+                    </tr>
+                    <tr>
+                        <td data-label="City">Duloc</td>
+                        <td data-label="About">The Lordship of Lord Farquaad</td>
+                        <td data-label="Film">Shrek</td>
+                    </tr>
+                    <tr>
+                        <td data-label="City">Far Far Away</td>
+                        <td data-label="About">The kingdom ruled by Fiona's parents</td>
+                        <td data-label="Film">Shrek 2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="City">Worcestershire Academy</td>
+                        <td data-label="About">A boarding school</td>
+                        <td data-label="Film">Shrek 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <div><h3>About</h3></div>
+        <section id="About" class="content">
+            
+            <p>Shrek sparked a motion picture phenomenon and captured the world's imagination with...the Greatest Fairy Tale Never Told! Shrek (Mike Myers) goes on a quest to rescue the feisty Princess Fiona (Cameron Diaz) with the help of his loveable Donkey (Eddie Murphy) and win back the deed to his swamp from scheming Lord Farquaad.
+
+            </p>
+            <img src= "https://www.dreamworks.com/storage/movies/shrek/shrek-about-mobile.jpg" alt="Handsome Shrek">
+
+        </section>
+        
+        <section id="contact" class="content">
+            <h3>Stay in touch</h3>
+
+            <div class="container">
+                <form action="action_page.php">
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="spain">Spain</option>
+                        <option value="united kingdom">United Kingdom</option>
+                        <option value="italy">Italy</option>
+                    </select>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email..">
+
+                    <input type="submit" value="Submit"> 
+
+                </form>
+            </div>
+        </section>
+        <br>
+    </main>
+    <footer>Get out of my swamp already!</footer>
 </body>
 </html>
+
+  
