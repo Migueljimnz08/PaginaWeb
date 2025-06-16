@@ -4,6 +4,7 @@
   --black: #333;
   --green: rgb(5, 239, 5);
   --grey: #ccc;
+  --blanco: #f2f2f2;
 }
 
 * {
@@ -186,33 +187,48 @@ footer {
   text-align: center;
 }
 
-#Actors h2 {
-  text-align: start;
-  padding-left: 5%;
+ .titulo {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 2rem;
+  grid-column: 1 / -1;
+
 }
-/*
-#Actors div {
+
+#Actors > article > img {
 display: block;
 unicode-bidi: isolate;
+border-radius: 15px;
+object-fit: cover;
+height: 250px;
+width: 100%;
+}
+
+#Actors > article:hover .overlay {
+opacity: 1;
 }
 
 #Actors {
-    cursor: pointer;
-    width: 1005;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#Actors > article {
+position: relative;
+overflow: hidden;
+border-radius: 15px;
+margin: 20px 20px;
 }
 
 .overlay {
   position: absolute;
   display: flex;
+  inset: 0;
   justify-content: center;
   align-items: center;
-  align-content: center;
   transition: .5s;
   background-color: var(--green);
   opacity: 0;
@@ -220,9 +236,9 @@ unicode-bidi: isolate;
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 20px;
+  border-radius: 15px;
 }
-  */
+  
 @media (min-width: 768px) {
   nav ul {
     flex-direction: row;
@@ -284,6 +300,10 @@ unicode-bidi: isolate;
     border: 1px solid #ccc;
     text-align: left;
   }
+
+  #Actors {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -294,5 +314,9 @@ unicode-bidi: isolate;
   nav ul {
     justify-content: center;
     gap: 2rem;
+  }
+
+  #Actors {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
