@@ -11,23 +11,23 @@ document.querySelector("form").addEventListener("submit", function (event) {
   const lname = event.target.lname.value;
   const email = event.target.email.value;
 
-  let ms = '';
+  let msj = '';
 
   if (fname.length < 3 || fname.length > 30) {
     console.log('First name out of character range: 3-30');
-    msj += 'First name out of character range: 3-30';
+    msj += 'First name out of character range: 3-30\n';
   }
 
   if (lname.length <3 || lname.length > 30) {
     console.log('Last name out of character range: 3-30');
-    msj += 'Last name out of character range: 3-30';
+    msj += 'Last name out of character range: 3-30\n';
   }
 
    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-   if (emailRegex.test(email)){
+   if (!emailRegex.test(email)){
     console.log(`${email}: is not valid`);
-    msj += `${email}: is not valid`;
+    msj += `${email}: is not valid\n`;
    }
 
    if (msj.length !=0) {

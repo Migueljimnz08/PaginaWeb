@@ -75,23 +75,23 @@ nav ul li a {
   padding: 0.5rem;
 }
 
-#About, #Worlds, h3 {
+#about, #worlds, h3 {
   margin-left: 5%;
   margin-right: 5%;
 }
 
-#About {
+#about {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-#About p, #About img {
+#about p, #about img {
   width: 100%;
 }
 
-#About img {
+#about img {
   max-width: 100%;
   height: auto;
 }
@@ -196,7 +196,7 @@ footer {
 
 }
 
-#Actors > article > img {
+#actors > article > img {
 display: block;
 unicode-bidi: isolate;
 border-radius: 15px;
@@ -205,18 +205,18 @@ height: 250px;
 width: 100%;
 }
 
-#Actors > article:hover .overlay {
+#actors > article:hover .overlay {
 opacity: 1;
 }
 
-#Actors {
+#actors {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
 }
 
-#Actors > article {
+#actors > article {
 position: relative;
 overflow: hidden;
 border-radius: 15px;
@@ -245,16 +245,16 @@ margin: 20px 20px;
     justify-content: space-around;
   }
 
-  #About {
+  #about {
     flex-direction: row;
     align-items: center;
   }
 
-  #About p {
+  #about p {
     width: 50%;
   }
 
-  #About img {
+  #about img {
     width: 45%;
   }
 
@@ -301,7 +301,7 @@ margin: 20px 20px;
     text-align: left;
   }
 
-  #Actors {
+  #actors {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -316,7 +316,7 @@ margin: 20px 20px;
     gap: 2rem;
   }
 
-  #Actors {
+  #actors {
     grid-template-columns: repeat(3, 1fr);
   }
 }
